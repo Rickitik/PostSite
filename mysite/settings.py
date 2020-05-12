@@ -120,3 +120,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Sending e-mail
+#
+# If you are sending emails using Gmail with the preceding configuration, you will
+# have to enable access for less secure applications at https://myaccount.google.
+# com/lesssecureapps
+
+# EMAIL_HOST:  'smtp.gmail.com' The SMTP server host; the default is localhost
+# EMAIL_PORT: 587  The SMTP port; the default is 25
+# EMAIL_HOST_USER: 'your_account@gmail.com' The username for the SMTP server
+# EMAIL_HOST_PASSWORD: 'your_password'  The password for the SMTP server
+# EMAIL_USE_TLS: True  Whether to use a Transport Layer Security (TLS) secure
+# connection
+# EMAIL_USE_SSL: Whether to use an implicit TLS secure connection
+
+# If you can't use an SMTP server, you can tell Django to write emails to the console
+# by adding the following setting to the settings.py file:
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
